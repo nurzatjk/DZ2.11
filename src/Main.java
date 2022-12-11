@@ -1,39 +1,38 @@
 import com.sun.jdi.Value;
 
 public class Main {
-    public static void main(String[] args) {
-        Printable print[]  = {creatObject("Mercedes"),
-                creatObject("Tractor")
-                ,creatObject("Limousine")};
-        for (Printable printable:print) {
-                printable.print();
-
-        }
+   public static  void main (String[] args) {
+       creatObject("Mercedec");
+       creatObject("Tractor");
+       creatObject("Limousine");
+       creatObject("Limousine");
 
 
-        }
+       }
 
 
-    public static Printable creatObject (String className) {
-        switch (className) {
-            case "Tractor":
-                Tractor tractor = new Tractor(2000, "BigBos", "Boss");
-                return tractor;
-            case  "Limoisine":
-                Limousine limousine = new Limousine(2005,"Siri","Seven");
-                return  limousine;
 
-            case  "Mercedes":
+       private static Car creatObject (String ModelName) {
+           switch (ModelName) {
+               case "Tractor":
+                   Tractor tractor = new Tractor(2000, "BigBos", "Boss");
+                   tractor.print();
+                   break;
 
-                Mercedec mercedec = new Mercedec(2012,"Pico",2.44);
+               case "Limousine":
+                   Limousine limousine = new Limousine(2005, "Siri",7);
+                   limousine.print();
+                   break;
 
-                return  mercedec;
+               case "Mercedec":
+                   Mercedec mercedec = new Mercedec(2012, "Pico", 2.44);
+                   mercedec.print();
+                   break;
 
-            default:
-                return null;
-        }
-    }
-}
+           }
+                   return null;
+           }
+   }
 
 
 

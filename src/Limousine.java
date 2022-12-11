@@ -1,12 +1,12 @@
 public class Limousine  extends Car
 {
-    public String passengerSeats;
+    public int  passengerSeats;
 
-    public Limousine(int year, String name,String passengerSeats) {
+    public Limousine(int year, String name,int passengerSeats) {
         super(year, name);
     }
 
-    public String getPassengerSeats() {
+    public int getPassengerSeats() {
         return passengerSeats;
     }
 
